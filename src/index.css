@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Sen', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background: #FFFFFF;
+  color: #1E293B;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   PREMIUM ROYAL BLUE SCROLLBAR
+========================= */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E9EEF5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #174EA6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0D3880;
+}
+
+/* =========================
+   GLASS EFFECT (LIGHT ROYAL)
+========================= */
+.glass {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #DCE9FA;
+}
+
+/* =========================
+   NAVBAR LINKS
+========================= */
+nav a {
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+nav a:hover {
+  transform: translateY(-1px);
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #174EA6;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   BUTTON PREMIUM FEEL
+========================= */
+button, a {
+  transition: all 0.25s ease;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   CARDS PREMIUM LIFT
+========================= */
+.card-hover {
+  transition: all 0.35s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(23, 78, 166, 0.12);
+  border-color: #174EA6;
+}
+
+/* =========================
+   INPUT FOCUS
+========================= */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 1px solid #174EA6 !important;
+  box-shadow: 0 0 0 3px rgba(23, 78, 166, 0.12) !important;
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS (1024px)
+========================= */
+.af-hmbg {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .af-dnav {
+    display: none !important;
+  }
+
+  .af-dcta {
+    display: none !important;
+  }
+
+  .af-hmbg {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .af-hmbg {
+    display: none !important;
+  }
+  .af-dnav {
+    display: flex !important;
+  }
+  .af-dcta {
+    display: flex !important;
+  }
+}
+
+/* Small mobile spacing */
+@media (max-width: 600px) {
+  h1 {
+    line-height: 1.05 !important;
+  }
+
+  section {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
+
+/* =========================
+   ROYAL BLUE TEXT GRADIENT
+========================= */
+.text-gradient {
+  background: linear-gradient(135deg, #174EA6, #2563EB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   SUBTLE ROYAL BLUE BACKGROUND GRID
+========================= */
+.bg-grid {
+  background-image: linear-gradient(rgba(23, 78, 166, 0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(23, 78, 166, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
